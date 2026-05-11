@@ -363,3 +363,19 @@ section{padding:100px 2rem}
   .carr-arrow{width:36px;height:36px;font-size:1.1rem}
 }
 @media(max-width:480px){.stats-inner{grid-template-columns:1fr 1fr}}
+
+/* En tu style.css, buscá .logo-img y reemplazalo por esto: */
+.logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  /* Sin filtro — se ve con sus colores originales sobre fondo blanco */
+}
+
+/* Si el logo tiene partes muy oscuras que querés aclarar, usá: */
+.logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);  /* Hace el logo 100% blanco */
+}
