@@ -302,20 +302,155 @@ section{padding:100px 2rem}
 .btn-submit>*{position:relative;z-index:1}
 
 /* ── FOOTER ── */
-.footer{background:var(--azul);border-top:none;padding:0}
-.footer-main{max-width:1200px;margin:0 auto;padding:3rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
-.footer-logo{display:flex;align-items:center;gap:14px}
-.footer-logo img{height:44px;width:auto;object-fit:contain}
-.footer-logo-txt{display:flex;flex-direction:column}
-.footer-logo-name{font-family:var(--font-head);font-size:1rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--blanco)}
-.footer-logo-sub{font-family:var(--font-head);font-size:.55rem;font-weight:400;letter-spacing:.25em;text-transform:uppercase;color:var(--rojo)}
-.footer-meta{text-align:center}
-.footer-meta p{font-family:var(--font-head);font-size:.6rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,0.6);line-height:1.8}
-.footer-meta .badges{font-family:var(--font-head);font-size:.58rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--rojo);margin-top:.5rem}
-.footer-wa{display:flex;align-items:center;gap:10px;font-family:var(--font-head);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:#25D366;color:white;padding:.7rem 1.4rem;transition:background .2s}
-.footer-wa:hover{background:#20ba57}
-.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding:1.2rem 2rem;text-align:center;font-family:var(--font-head);font-size:.58rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,0.4)}
+/* ───────── FOOTER ───────── */
 
+.footer{
+  background:#03152c;
+  padding:2.8rem 4rem;
+  position:relative;
+  overflow:hidden;
+}
+
+.footer-container{
+  max-width:1400px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:3rem;
+}
+
+/* IZQUIERDA */
+
+.footer-brand{
+  display:flex;
+  align-items:center;
+  gap:1.4rem;
+}
+
+.footer-logo{
+  width:88px;
+  height:auto;
+  object-fit:contain;
+  background:white;
+  padding:.3rem;
+}
+
+.footer-brand-text{
+  display:flex;
+  flex-direction:column;
+}
+
+.footer-brand-text h3{
+  font-family:var(--font-head);
+  font-size:2rem;
+  font-weight:800;
+  letter-spacing:.02em;
+  text-transform:uppercase;
+  color:var(--blanco);
+  margin:0;
+  line-height:1;
+}
+
+.footer-brand-text p{
+  margin-top:.8rem;
+  font-family:var(--font-head);
+  font-size:.82rem;
+  font-weight:500;
+  letter-spacing:.38em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.9);
+}
+
+/* DERECHA */
+
+.footer-info{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:.8rem;
+}
+
+.footer-info span{
+  font-family:var(--font-head);
+  font-size:1rem;
+  font-weight:500;
+  color:rgba(255,255,255,.9);
+}
+
+.footer-info span:last-child{
+  font-size:.95rem;
+  color:rgba(255,255,255,.45);
+}
+
+/* WHATSAPP FLOAT */
+
+.footer-wa{
+  position:fixed;
+  right:28px;
+  bottom:28px;
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  background:#25D366;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  box-shadow:
+    0 0 0 18px rgba(37,211,102,.14),
+    0 10px 30px rgba(0,0,0,.25);
+  z-index:999;
+  transition:.25s ease;
+}
+
+.footer-wa:hover{
+  transform:scale(1.08);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:950px){
+
+  .footer{
+    padding:2.5rem 1.5rem;
+  }
+
+  .footer-container{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:2rem;
+  }
+
+  .footer-brand{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .footer-brand-text h3{
+    font-size:1.35rem;
+  }
+
+  .footer-brand-text p{
+    font-size:.7rem;
+    letter-spacing:.22em;
+  }
+
+  .footer-info{
+    align-items:flex-start;
+  }
+
+  .footer-info span{
+    font-size:.82rem;
+  }
+
+  .footer-wa{
+    width:62px;
+    height:62px;
+    right:20px;
+    bottom:20px;
+  }
+}
 /* ── WA FLOAT ── */
 .wa-float{position:fixed;bottom:28px;right:28px;z-index:900;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .2s;animation:waPulse 3s infinite}
 .wa-float:hover{transform:scale(1.12);animation:none}
