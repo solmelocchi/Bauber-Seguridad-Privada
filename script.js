@@ -161,7 +161,7 @@ const cobs = new IntersectionObserver(entries => {
 document.querySelectorAll('.stat-num[data-target]').forEach(el => cobs.observe(el));
 
 
-/* 10. CARRUSEL MANUAL */
+/* 10. CARRUSEL */
 (function () {
   const track  = document.getElementById('carouselTrack');
   if (!track) return;
@@ -205,7 +205,6 @@ document.querySelectorAll('.stat-num[data-target]').forEach(el => cobs.observe(e
 function toggleFaq(btn) {
   const item = btn.closest('.faq-item');
   const body = item.querySelector('.faq-body');
-  const bodyInner = item.querySelector('.faq-body-inner');
   const isOpen = item.classList.contains('open');
 
   // Cerrar todos
