@@ -22,7 +22,7 @@ document.addEventListener('mousemove', e => {
   requestAnimationFrame(animCursor);
 })();
 
-document.querySelectorAll('a, button, .serv-card, .dif-item, .pilar, .pers-item, .client-logo')
+document.querySelectorAll('a, button, .serv-card, .pilar, .client-card, .faq-item')
   .forEach(el => {
     el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
     el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
@@ -80,6 +80,7 @@ window.addEventListener('scroll', () => {
 /* 6. PARTÍCULAS */
 (function () {
   const c = document.getElementById('heroParticles');
+  if (!c) return;
   for (let i = 0; i < 18; i++) {
     const s = document.createElement('span');
     s.style.cssText = `left:${Math.random() * 100}%;height:${40 + Math.random() * 120}px;animation-duration:${6 + Math.random() * 12}s;animation-delay:${Math.random() * 10}s;opacity:${.1 + Math.random() * .25}`;
@@ -163,12 +164,13 @@ document.querySelectorAll('.stat-num[data-target]').forEach(el => cobs.observe(e
 /* 10. CARRUSEL MANUAL */
 (function () {
   const track  = document.getElementById('carouselTrack');
+  if (!track) return;
+
   const slides = track.querySelectorAll('.carousel-slide');
   const dotsEl = document.getElementById('carrDots');
   const total  = slides.length;
   let cur = 0, timer;
 
-  /* generar dots */
   for (let i = 0; i < total; i++) {
     const d = document.createElement('button');
     d.className = 'carr-dot' + (i === 0 ? ' active' : '');
@@ -188,7 +190,6 @@ document.querySelectorAll('.stat-num[data-target]').forEach(el => cobs.observe(e
   document.getElementById('carrPrev').addEventListener('click', () => go(cur - 1));
   document.getElementById('carrNext').addEventListener('click', () => go(cur + 1));
 
-  /* touch swipe */
   let tsx = 0;
   track.addEventListener('touchstart', e => { tsx = e.touches[0].clientX; }, { passive: true });
   track.addEventListener('touchend',   e => {
@@ -200,7 +201,28 @@ document.querySelectorAll('.stat-num[data-target]').forEach(el => cobs.observe(e
 })();
 
 
-/* 11. FORMULARIO → WhatsApp */
+/* 11. FAQ ACCORDION */
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const body = item.querySelector('.faq-body');
+  const bodyInner = item.querySelector('.faq-body-inner');
+  const isOpen = item.classList.contains('open');
+
+  // Cerrar todos
+  document.querySelectorAll('.faq-item.open').forEach(openItem => {
+    openItem.classList.remove('open');
+    openItem.querySelector('.faq-body').classList.remove('open');
+  });
+
+  // Abrir el clickeado si estaba cerrado
+  if (!isOpen) {
+    item.classList.add('open');
+    body.classList.add('open');
+  }
+}
+
+
+/* 12. FORMULARIO → WhatsApp */
 function handleSubmit(e) {
   e.preventDefault();
   const d   = new FormData(e.target);
