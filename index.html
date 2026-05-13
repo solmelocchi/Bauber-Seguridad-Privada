@@ -39,6 +39,7 @@
   </div>
 </header>
 
+<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="#nosotros"  onclick="closeMenu()">Nosotros</a>
   <a href="#servicios" onclick="closeMenu()">Servicios</a>
@@ -61,10 +62,6 @@
       <em>Seguridad Privada</em>
     </h1>
     <div class="hero-badges reveal delay-2">
-      <span class="hero-badge">DISEP</span>
-      <span class="hero-badge">ART</span>
-      <span class="hero-badge">Resp. Civil</span>
-      <span class="hero-badge">Monitoreo 24/7</span>
     </div>
     <div class="hero-btns reveal delay-3">
       <a href="#contacto" class="btn-primary">
@@ -77,7 +74,6 @@
       </a>
     </div>
   </div>
-  <div class="hero-scroll">Explorar</div>
 </section>
 
 <!-- STATS BAR -->
@@ -105,23 +101,9 @@
       <div class="nosotros-txt">
         <div class="sec-label reveal">Quiénes somos</div>
         <h2 class="sec-title reveal delay-1">Una compañía<br>construida sobre<br>la confianza</h2>
-        <div class="gold-line reveal delay-2"></div>
+        <div class="red-line reveal delay-2"></div>
         <p class="reveal delay-2"><strong>Bauber Seguridad Privada</strong> es una empresa argentina especializada en vigilancia, control de accesos y soluciones integrales de seguridad. Acompañamos a barrios privados, empresas y comercios con un servicio profesional, discreto y sostenido en el tiempo.</p>
         <div class="pilares-grid reveal delay-3">
-          <div class="pilar">
-            <div class="pilar-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c0161e" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-            </div>
-            <h3>Visión</h3>
-            <p>Referentes en seguridad por calidad operativa e innovación tecnológica.</p>
-          </div>
-          <div class="pilar">
-            <div class="pilar-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c0161e" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <h3>Valores</h3>
-            <p>Compromiso, discreción profesional, integridad y mejora continua.</p>
-          </div>
           <div class="pilar" style="grid-column:1/-1">
             <div class="pilar-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c0161e" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg>
@@ -134,11 +116,7 @@
       <div class="nosotros-visual reveal-right">
         <div class="corner-deco"></div>
         <div class="nosotros-img-wrap">
-          <img src="https://confianz-pro.lovable.app/assets/hero-bg-CBb7KTpU.jpg" alt="Bauber Seguridad" style="filter:brightness(.6)">
-          <div class="nosotros-badge">
-            <div class="nosotros-badge-num">2009</div>
-            <div class="nosotros-badge-txt">Fundación</div>
-          </div>
+          <img src="https://confianz-pro.lovable.app/assets/hero-bg-CBb7KTpU.jpg" alt="Bauber Seguridad" style="filter:brightness(.7)">
         </div>
       </div>
     </div>
@@ -151,7 +129,7 @@
     <div class="servicios-head">
       <div class="sec-label reveal">Qué hacemos</div>
       <h2 class="sec-title reveal delay-1">Nuestros Servicios</h2>
-      <div class="gold-line reveal delay-2"></div>
+      <div class="red-line reveal delay-2" style="margin:0 auto 2.5rem"></div>
       <p class="sec-sub reveal delay-2" style="margin:0 auto">Servicios diseñados con criterio profesional para clientes que exigen excelencia.</p>
     </div>
     <div class="servicios-grid">
@@ -201,7 +179,7 @@
     <div class="clientes-head">
       <div class="sec-label reveal">Referencias</div>
       <h2 class="sec-title reveal delay-1">Clientes que confían en Bauber</h2>
-      <div class="gold-line reveal delay-2"></div>
+      <div class="red-line reveal delay-2" style="margin:0 auto 2.5rem"></div>
       <p class="sec-sub reveal delay-2" style="margin:0 auto">Barrios privados, empresas e instituciones eligen nuestro servicio cada día.</p>
     </div>
     <div class="carousel-wrapper reveal">
@@ -237,7 +215,7 @@
     <div class="faq-head">
       <div class="sec-label reveal">Lo que nos preguntan</div>
       <h2 class="sec-title reveal delay-1">Preguntas Frecuentes</h2>
-      <div class="gold-line reveal delay-2"></div>
+      <div class="red-line reveal delay-2" style="margin:0 auto 1rem"></div>
       <p class="sec-sub reveal delay-2">Todo lo que necesitás saber antes de contratar nuestro servicio.</p>
     </div>
     <div class="faq-list reveal delay-2">
@@ -250,11 +228,11 @@
           </span>
         </button>
         <div class="faq-body">
-          <ul class="faq-ul">
-            <li><span class="faq-dot"></span><span><strong>Diagnóstico:</strong> inmediato</span></li>
-            <li><span class="faq-dot"></span><span><strong>Selección y capacitación:</strong> 2–3 semanas</span></li>
-            <li><span class="faq-dot"></span><span><strong>Inicio de operaciones:</strong> inmediato</span></li>
-          </ul>
+          <div class="faq-body-inner">
+            <div class="faq-row"><span class="faq-label">Diagnóstico</span><span class="faq-value">Inmediato</span></div>
+            <div class="faq-row"><span class="faq-label">Selección y capacitación</span><span class="faq-value">2–3 semanas</span></div>
+            <div class="faq-row"><span class="faq-label">Inicio de operaciones</span><span class="faq-value">Inmediato tras capacitación</span></div>
+          </div>
         </div>
       </div>
 
@@ -266,11 +244,9 @@
           </span>
         </button>
         <div class="faq-body">
-          <ul class="faq-ul">
-            <li><span class="faq-dot"></span><span>El vigilador actúa de inmediato según protocolo establecido.</span></li>
-            <li><span class="faq-dot"></span><span>La central coordina la respuesta inmediata.</span></li>
-            <li><span class="faq-dot"></span><span>Se emite un reporte formal del incidente.</span></li>
-          </ul>
+          <div class="faq-body-inner">
+            <p class="faq-text">El vigilador actúa de inmediato según protocolo establecido. La central coordina la respuesta y se emite un reporte formal del incidente.</p>
+          </div>
         </div>
       </div>
 
@@ -282,9 +258,9 @@
           </span>
         </button>
         <div class="faq-body">
-          <ul class="faq-ul">
-            <li><span class="faq-dot"></span><span>100%. Certificación vigente y verificable en DISEP.</span></li>
-          </ul>
+          <div class="faq-body-inner">
+            <p class="faq-text">100%. Certificación vigente y verificable en DISEP.</p>
+          </div>
         </div>
       </div>
 
@@ -296,11 +272,11 @@
           </span>
         </button>
         <div class="faq-body">
-          <ul class="faq-ul">
-            <li><span class="faq-dot"></span><span>Centro de monitoreo 24/7 coordina la respuesta.</span></li>
-            <li><span class="faq-dot"></span><span>Contacto directo con supervisor y fuerzas de seguridad.</span></li>
-            <li><span class="faq-dot"></span><span><strong>Tiempo de respuesta:</strong> menos de 10 minutos.</span></li>
-          </ul>
+          <div class="faq-body-inner">
+            <div class="faq-row"><span class="faq-label">Monitoreo</span><span class="faq-value">Centro propio 24/7 coordina la respuesta</span></div>
+            <div class="faq-row"><span class="faq-label">Coordinación</span><span class="faq-value">Contacto directo con supervisor y fuerzas de seguridad</span></div>
+            <div class="faq-row"><span class="faq-label">Tiempo de respuesta</span><span class="faq-value faq-value-red">Menos de 10 minutos</span></div>
+          </div>
         </div>
       </div>
 
@@ -312,11 +288,11 @@
           </span>
         </button>
         <div class="faq-body">
-          <ul class="faq-ul">
-            <li><span class="faq-dot"></span><span>Centro de monitoreo <strong>propio</strong>.</span></li>
-            <li><span class="faq-dot"></span><span>Mismos supervisores en terreno siempre.</span></li>
-            <li><span class="faq-dot"></span><span>Operación integrada bajo un solo comando.</span></li>
-          </ul>
+          <div class="faq-body-inner">
+            <div class="faq-row"><span class="faq-label">Infraestructura</span><span class="faq-value">Centro de monitoreo propio</span></div>
+            <div class="faq-row"><span class="faq-label">Continuidad</span><span class="faq-value">Mismos supervisores en terreno siempre</span></div>
+            <div class="faq-row"><span class="faq-label">Operación</span><span class="faq-value">Integrada bajo un solo comando</span></div>
+          </div>
         </div>
       </div>
 
@@ -329,7 +305,7 @@
   <div class="container">
     <div class="sec-label reveal">Dónde estamos</div>
     <h2 class="sec-title reveal delay-1">Ubicación y Contacto</h2>
-    <div class="gold-line reveal delay-2"></div>
+    <div class="red-line reveal delay-2"></div>
     <div class="ubicacion-grid">
       <div class="ubi-info">
         <p class="ubi-subtitle">Nuestras Oficinas</p>
@@ -376,7 +352,7 @@
   <div class="container">
     <div class="sec-label reveal">Hablemos</div>
     <h2 class="sec-title reveal delay-1">¿Necesitás Seguridad?</h2>
-    <div class="gold-line reveal delay-2"></div>
+    <div class="red-line reveal delay-2"></div>
     <p class="sec-sub reveal delay-2" style="margin-bottom:3rem">Asesoramiento sin cargo. Respuesta en menos de 24 hs.</p>
     <div class="contacto-grid">
       <div class="contacto-left">
@@ -443,15 +419,11 @@
     </div>
     <div class="footer-info">
       <span>© 2026 BAUBER · Todos los derechos reservados</span>
-      <span>DISEP · ART · RESPONSABILIDAD CIVIL</span>
     </div>
   </div>
-  <a href="https://wa.me/542613363121" target="_blank" class="footer-wa" aria-label="WhatsApp">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
 </footer>
 
-<!-- WA FLOAT -->
+<!-- UN SOLO BOTÓN WA FLOTANTE -->
 <a href="https://wa.me/542613363121" target="_blank" class="wa-float" aria-label="WhatsApp">
   <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
