@@ -141,7 +141,7 @@ section{padding:100px 2rem}
 .nosotros-badge{position:absolute;bottom:1.5rem;left:1.5rem;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border:1px solid rgba(26,58,107,0.12);padding:1.2rem 1.5rem;border-left:3px solid var(--rojo)}
 .nosotros-badge-num{font-family:var(--font-head);font-size:2.5rem;font-weight:800;color:var(--rojo);line-height:1}
 .nosotros-badge-txt{font-family:var(--font-head);font-size:.58rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gris-tex)}
-.corner-deco{position:absolute;top:-10px;right:-10px;width:60px;height:60px;border-top:2px solid var(--rojo);border-right:2px solid var(--rojo)}
+
 
 /* ── SERVICIOS ── */
 .servicios{background:var(--fondo)}
