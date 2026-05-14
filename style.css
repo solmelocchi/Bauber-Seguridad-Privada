@@ -129,7 +129,7 @@ section { padding: 90px 2rem; }
 .stat-item { padding: 2.5rem 2rem; text-align: center; border-right: 1px solid rgba(255,255,255,.1); transition: background .3s; }
 .stat-item:last-child { border-right: none; }
 .stat-item:hover { background: rgba(192,22,30,.12); }
-.stat-num { font-family: var(--font-head); font-size: clamp(2.4rem,4vw,3.6rem); font-weight: 800; color: var(--rojo); line-height: 1; margin-bottom: .3rem; }
+.stat-num { font-family: var(--font-head); font-size: clamp(2.4rem,4vw,3.6rem); font-weight: 800; color: #ffffff; line-height: 1; margin-bottom: .3rem; }
 .stat-txt { font-family: var(--font-head); font-size: .63rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.6); }
 
 /* ══ NOSOTROS ══ */
