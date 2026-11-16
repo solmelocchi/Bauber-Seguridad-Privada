@@ -11,15 +11,15 @@
 <link rel="canonical" href="https://solmelocchi.github.io/Bauber-Seguridad-Privada/">
 
 <!-- Favicon -->
-<link rel="icon" type="image/jpeg" href="logo.jpeg">
-<link rel="apple-touch-icon" href="logo.jpeg">
+<link rel="icon" type="image/jpeg" href="img/logo-192.jpg">
+<link rel="apple-touch-icon" href="img/logo-192.jpg">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://solmelocchi.github.io/Bauber-Seguridad-Privada/">
 <meta property="og:title" content="Bauber Seguridad Privada | Vigilancia Profesional en Mendoza">
 <meta property="og:description" content="Más de 17 años protegiendo barrios privados, empresas y comercios. DISEP · ART · Monitoreo 24/7. Respuesta en menos de 10 minutos.">
-<meta property="og:image" content="https://solmelocchi.github.io/Bauber-Seguridad-Privada/hero-bg.jpg">
+<meta property="og:image" content="https://solmelocchi.github.io/Bauber-Seguridad-Privada/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="es_AR">
@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Bauber Seguridad Privada | Mendoza">
 <meta name="twitter:description" content="17 años protegiendo Mendoza. DISEP · ART · 24/7.">
-<meta name="twitter:image" content="https://solmelocchi.github.io/Bauber-Seguridad-Privada/hero-bg.jpg">
+<meta name="twitter:image" content="https://solmelocchi.github.io/Bauber-Seguridad-Privada/img/og-image.jpg">
 
 <!-- Geo -->
 <meta name="geo.region" content="AR-M">
@@ -46,7 +46,7 @@
   "description": "Empresa de vigilancia y seguridad privada con más de 17 años de experiencia en Mendoza. Barrios privados, empresas, concesionarios y CCTV.",
   "url": "https://solmelocchi.github.io/Bauber-Seguridad-Privada/",
   "logo": "https://solmelocchi.github.io/Bauber-Seguridad-Privada/logo.jpeg",
-  "image": "https://solmelocchi.github.io/Bauber-Seguridad-Privada/hero-bg.jpg",
+  "image": "https://solmelocchi.github.io/Bauber-Seguridad-Privada/img/og-image.jpg",
   "telephone": "+542613363121",
   "email": "bauberseguridad@gmail.com",
   "priceRange": "$$",
@@ -86,20 +86,22 @@
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="img/hero-bg.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<!-- Marca que hay JS: solo así se esconden los elementos que aparecen al hacer scroll -->
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
-<div class="cursor-dot" id="cursorDot"></div>
-<div class="cursor-ring" id="cursorRing"></div>
 <div id="progress-bar"></div>
 
 <!-- HEADER -->
 <header class="header" id="header">
   <div class="header-inner">
     <a href="#hero" class="logo-wrap">
-      <img src="logo.jpeg" alt="Bauber" class="logo-img">
+      <img src="img/logo-192.jpg" alt="" width="46" height="46" class="logo-img">
       <div class="logo-text">
         <span class="logo-name">Bauber</span>
         <span class="logo-sub">Seguridad Privada</span>
@@ -113,7 +115,7 @@
       <a href="#ubicacion">Ubicación</a>
     </nav>
     <a href="#contacto" class="btn-nav"><span class="btn-nav-txt">Presupuesto</span></a>
-    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menú">
+    <button class="hamburger" id="hamburger" type="button" onclick="toggleMenu()" aria-label="Menú" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -133,13 +135,18 @@
 <section id="hero" class="hero">
   <div class="hero-bg" id="heroBg"></div>
   <div class="hero-overlay"></div>
-  <div class="hero-particles" id="heroParticles"></div>
   <div class="hero-accent"></div>
   <div class="hero-content">
     <div class="hero-tag reveal">Mendoza · Argentina · Desde 2009</div>
     <h1 class="reveal delay-1">
-      <span id="typewriter-text"></span>
-      <em>Seguridad Privada</em>
+      <span class="sr-only">Excelencia en seguridad privada</span>
+      <span class="hero-rotator" aria-hidden="true">
+        <span class="rot-word is-active">Excelencia en</span>
+        <span class="rot-word">Confianza en</span>
+        <span class="rot-word">Protección en</span>
+        <span class="rot-word">Profesionales en</span>
+      </span>
+      <em aria-hidden="true">Seguridad Privada</em>
     </h1>
     <div class="hero-badges reveal delay-2"></div>
     <div class="hero-btns reveal delay-3">
@@ -147,7 +154,7 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82 19.79 19.79 0 01.07 1.18 2 2 0 012.03 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
         <span>Solicitar Servicio</span>
       </a>
-      <a href="https://wa.me/542613363121" target="_blank" class="btn-secondary">
+      <a href="https://wa.me/542613363121" target="_blank" rel="noopener" class="btn-secondary">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         <span>Contactar</span>
       </a>
@@ -159,7 +166,7 @@
 <div class="stats-bar">
   <div class="stats-inner">
     <div class="stat-item reveal">
-      <div class="stat-num" data-target="17" data-suffix="+">0+</div>
+      <div class="stat-num" data-target="17" data-suffix="+">17+</div>
       <div class="stat-txt">Años de trayectoria</div>
     </div>
     <div class="stat-item reveal delay-1">
@@ -167,7 +174,7 @@
       <div class="stat-txt">Monitoreo continuo</div>
     </div>
     <div class="stat-item reveal delay-2">
-      <div class="stat-num" data-target="100" data-suffix="%">0%</div>
+      <div class="stat-num" data-target="100" data-suffix="%">100%</div>
       <div class="stat-txt">Personal habilitado</div>
     </div>
   </div>
@@ -188,14 +195,14 @@
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c0161e" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg>
             </div>
             <h3>Respaldo Legal</h3>
-            <p>Habitación DISEP, cobertura ART, habilitaciones municipales vigentes, seguro de responsabilidad civil y de caución.</p>
+            <p>Habilitación DISEP, cobertura ART, habilitaciones municipales vigentes, seguro de responsabilidad civil y de caución.</p>
           </div>
         </div>
       </div>
       <div class="nosotros-visual reveal-right">
         <div class="corner-deco"></div>
         <div class="nosotros-img-wrap">
-          <img src="hero-bg.jpg" alt="Bauber Seguridad" style="filter:brightness(.7)">
+          <img src="img/hero-bg.jpg" alt="Garita de control de acceso en un barrio privado" width="1983" height="793" loading="lazy" decoding="async" style="filter:brightness(.7)">
         </div>
       </div>
     </div>
@@ -262,27 +269,27 @@
       <p class="sec-sub reveal delay-2" style="margin:0 auto">Barrios privados, empresas e instituciones eligen nuestro servicio cada día.</p>
     </div>
     <div class="carousel-wrapper reveal">
-      <button class="carr-arrow carr-prev" id="carrPrev" aria-label="Anterior">&#8249;</button>
+      <button class="carr-arrow carr-prev" id="carrPrev" type="button" aria-label="Clientes anteriores">&#8249;</button>
       <div class="carousel-viewport">
         <div class="carousel-track" id="carouselTrack">
           <div class="carousel-slide">
-            <div class="client-card"><img src="https://confianz-pro.lovable.app/assets/chacras-de-farrell-BvjVshHZ.png" alt="Chacras de Farrell"><div class="client-card-overlay"></div><div class="client-card-name">Chacras de Farrell</div></div>
-            <div class="client-card"><img src="https://confianz-pro.lovable.app/assets/la-toscana-9c8XlODb.png" alt="La Toscana"><div class="client-card-overlay"></div><div class="client-card-name">La Toscana</div></div>
-            <div class="client-card"><img src="https://confianz-pro.lovable.app/assets/automotores-san-martin-CbsjDUcW.png" alt="Automotores San Martín"><div class="client-card-overlay"></div><div class="client-card-name">Automotores San Martín</div></div>
+            <div class="client-card"><img src="img/clientes/chacras-de-farrell.jpg" width="800" height="600" loading="lazy" decoding="async" alt="Chacras de Farrell"><div class="client-card-overlay"></div><div class="client-card-name">Chacras de Farrell</div></div>
+            <div class="client-card"><img src="img/clientes/la-toscana.jpg" width="800" height="600" loading="lazy" decoding="async" alt="La Toscana"><div class="client-card-overlay"></div><div class="client-card-name">La Toscana</div></div>
+            <div class="client-card"><img src="img/clientes/automotores-san-martin.jpg" width="800" height="600" loading="lazy" decoding="async" alt="Automotores San Martín"><div class="client-card-overlay"></div><div class="client-card-name">Automotores San Martín</div></div>
           </div>
           <div class="carousel-slide">
-            <div class="client-card"><img src="https://confianz-pro.lovable.app/assets/la-bajada-BMtYLl9a.png" alt="La Bajada"><div class="client-card-overlay"></div><div class="client-card-name">La Bajada</div></div>
-            <div class="client-card"><img src="https://confianz-pro.lovable.app/assets/denver-CweWF07i.png" alt="Denver"><div class="client-card-overlay"></div><div class="client-card-name">Denver</div></div>
-            <div class="client-card"><img src="https://confianz-pro.lovable.app/assets/liceo-rugby-club-D03o1Eie.png" alt="Liceo Rugby Club"><div class="client-card-overlay"></div><div class="client-card-name">Liceo Rugby Club</div></div>
+            <div class="client-card"><img src="https://confianz-pro.lovable.app/assets/la-bajada-BMtYLl9a.png" width="800" height="600" loading="lazy" decoding="async" alt="La Bajada"><div class="client-card-overlay"></div><div class="client-card-name">La Bajada</div></div>
+            <div class="client-card"><img src="img/clientes/denver.jpg" width="800" height="600" loading="lazy" decoding="async" alt="Denver"><div class="client-card-overlay"></div><div class="client-card-name">Denver</div></div>
+            <div class="client-card"><img src="img/clientes/liceo-rugby-club.jpg" width="800" height="600" loading="lazy" decoding="async" alt="Liceo Rugby Club"><div class="client-card-overlay"></div><div class="client-card-name">Liceo Rugby Club</div></div>
           </div>
           <div class="carousel-slide">
-            <div class="client-card"><img src="https://confianz-pro.lovable.app/assets/punta-arizu-DhDJ7Or5.png" alt="Punta Arizu"><div class="client-card-overlay"></div><div class="client-card-name">Punta Arizu</div></div>
-            <div class="client-card"><img src="https://confianz-pro.lovable.app/assets/tupungato-valley-CzsA4Zn8.png" alt="Tupungato Valley"><div class="client-card-overlay"></div><div class="client-card-name">Tupungato Valley</div></div>
-            <div class="client-card"><img src="el marquesado - copia - copia.jpeg" alt="El Marquesado"><div class="client-card-overlay"></div><div class="client-card-name">El Marquesado</div></div>
+            <div class="client-card"><img src="img/clientes/punta-arizu.jpg" width="800" height="600" loading="lazy" decoding="async" alt="Punta Arizu"><div class="client-card-overlay"></div><div class="client-card-name">Punta Arizu</div></div>
+            <div class="client-card"><img src="img/clientes/tupungato-valley.jpg" width="800" height="600" loading="lazy" decoding="async" alt="Tupungato Valley"><div class="client-card-overlay"></div><div class="client-card-name">Tupungato Valley</div></div>
+            <div class="client-card"><img src="img/clientes/el-marquesado.jpg" width="800" height="600" loading="lazy" decoding="async" alt="El Marquesado"><div class="client-card-overlay"></div><div class="client-card-name">El Marquesado</div></div>
           </div>
         </div>
       </div>
-      <button class="carr-arrow carr-next" id="carrNext" aria-label="Siguiente">&#8250;</button>
+      <button class="carr-arrow carr-next" id="carrNext" type="button" aria-label="Clientes siguientes">&#8250;</button>
     </div>
     <div class="carr-dots" id="carrDots"></div>
   </div>
@@ -299,11 +306,11 @@
     </div>
     <div class="faq-list reveal delay-2">
       <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)">
-          <span class="faq-question">¿Cuales son sus procesos y tiempo?</span>
-          <span class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span>
+        <button class="faq-btn" type="button" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-1">
+          <span class="faq-question">¿Cuáles son sus procesos y tiempo?</span>
+          <span class="faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span>
         </button>
-        <div class="faq-body">
+        <div class="faq-body" id="faq-1">
           <div class="faq-body-inner">
             <div class="faq-row"><span class="faq-label">Diagnóstico</span><span class="faq-value">Inmediato</span></div>
             <div class="faq-row"><span class="faq-label">Selección y capacitación</span><span class="faq-value">2–3 semanas</span></div>
@@ -312,33 +319,33 @@
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)">
+        <button class="faq-btn" type="button" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-2">
           <span class="faq-question">¿Qué pasa si hay un problema o incidente?</span>
-          <span class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span>
+          <span class="faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span>
         </button>
-        <div class="faq-body">
+        <div class="faq-body" id="faq-2">
           <div class="faq-body-inner">
             <p class="faq-text">El vigilador actúa de inmediato según protocolo establecido. La central coordina la respuesta y se emite un reporte formal del incidente.</p>
           </div>
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)">
+        <button class="faq-btn" type="button" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-3">
           <span class="faq-question">¿Todos los guardias están habilitados por DISEP?</span>
-          <span class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span>
+          <span class="faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span>
         </button>
-        <div class="faq-body">
+        <div class="faq-body" id="faq-3">
           <div class="faq-body-inner">
             <p class="faq-text">100%. Certificación vigente y verificable en DISEP.</p>
           </div>
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)">
+        <button class="faq-btn" type="button" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-4">
           <span class="faq-question">¿Cómo responden ante emergencias?</span>
-          <span class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span>
+          <span class="faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span>
         </button>
-        <div class="faq-body">
+        <div class="faq-body" id="faq-4">
           <div class="faq-body-inner">
             <div class="faq-row"><span class="faq-label">Monitoreo</span><span class="faq-value">Centro propio 24/7 coordina la respuesta</span></div>
             <div class="faq-row"><span class="faq-label">Coordinación</span><span class="faq-value">Contacto directo con supervisor y fuerzas de seguridad</span></div>
@@ -347,11 +354,11 @@
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)">
+        <button class="faq-btn" type="button" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-5">
           <span class="faq-question">¿Qué diferencia a Bauber de otras empresas?</span>
-          <span class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span>
+          <span class="faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span>
         </button>
-        <div class="faq-body">
+        <div class="faq-body" id="faq-5">
           <div class="faq-body-inner">
             <div class="faq-row"><span class="faq-label">Infraestructura</span><span class="faq-value">Centro de monitoreo propio</span></div>
             <div class="faq-row"><span class="faq-label">Continuidad</span><span class="faq-value">Mismos supervisores en terreno siempre</span></div>
@@ -429,16 +436,16 @@
         <h3>Solicitá tu Consulta</h3>
         <form id="contactForm" onsubmit="handleSubmit(event)">
           <div class="form-row">
-            <div class="form-group"><label>Nombre</label><input type="text" name="nombre" placeholder="Tu nombre" required></div>
-            <div class="form-group"><label>Empresa / Barrio</label><input type="text" name="empresa" placeholder="Nombre de la organización"></div>
+            <div class="form-group"><label for="f-nombre">Nombre</label><input type="text" id="f-nombre" name="nombre" autocomplete="name" placeholder="Tu nombre" required></div>
+            <div class="form-group"><label for="f-empresa">Empresa / Barrio</label><input type="text" id="f-empresa" name="empresa" autocomplete="organization" placeholder="Nombre de la organización"></div>
           </div>
           <div class="form-row">
-            <div class="form-group"><label>WhatsApp</label><input type="tel" name="telefono" placeholder="+54 261 XXX-XXXX" required></div>
-            <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="tu@email.com"></div>
+            <div class="form-group"><label for="f-telefono">WhatsApp</label><input type="tel" id="f-telefono" name="telefono" autocomplete="tel" placeholder="+54 261 XXX-XXXX" required></div>
+            <div class="form-group"><label for="f-email">Email</label><input type="email" id="f-email" name="email" autocomplete="email" placeholder="tu@email.com"></div>
           </div>
           <div class="form-group">
-            <label>Servicio de Interés</label>
-            <select name="servicio" required>
+            <label for="f-servicio">Servicio de Interés</label>
+            <select id="f-servicio" name="servicio" required>
               <option value="" disabled selected>Seleccioná el servicio</option>
               <option>Barrios Privados</option>
               <option>Empresas y Comercios</option>
@@ -448,12 +455,11 @@
               <option>Proyecto a Medida</option>
             </select>
           </div>
-          <div class="form-group"><label>Mensaje (opcional)</label><textarea name="mensaje" placeholder="Contanos más sobre tu necesidad..."></textarea></div>
+          <div class="form-group"><label for="f-mensaje">Mensaje (opcional)</label><textarea id="f-mensaje" name="mensaje" placeholder="Contanos más sobre tu necesidad..."></textarea></div>
           <button type="submit" class="btn-submit">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
             <span>Enviar por WhatsApp</span>
           </button>
-          <p id="formMsg" style="display:none;text-align:center;margin-top:1rem;font-family:var(--font-head);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--rojo)"></p>
         </form>
       </div>
     </div>
@@ -463,54 +469,67 @@
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-container">
-    <div class="footer-brand">
-      <img src="logo.jpeg" alt="Bauber Seguridad Privada" class="footer-logo">
-      <div class="footer-brand-text">
-        <h3>BAUBER SEGURIDAD PRIVADA</h3>
-        <p>VIGILANCIA PROFESIONAL · DESDE 2009</p>
+    <div class="footer-brand-col">
+      <div class="footer-brand">
+        <img src="img/logo-192.jpg" alt="" width="42" height="42" loading="lazy" class="footer-logo">
+        <div class="footer-brand-text">
+          <h3>Bauber Seguridad Privada</h3>
+          <p>Vigilancia profesional · Desde 2009</p>
+        </div>
       </div>
+      <p class="footer-desc">Vigilancia, control de accesos y monitoreo para barrios privados, empresas y comercios de Mendoza.</p>
+      <ul class="footer-badges">
+        <li>Habilitación DISEP</li>
+        <li>Cobertura ART</li>
+        <li>Seguro de RC</li>
+      </ul>
     </div>
-    <div class="footer-info">
-      <span>© 2026 BAUBER · Todos los derechos reservados</span>
+
+    <nav class="footer-col" aria-label="Secciones del sitio">
+      <h4>Secciones</h4>
+      <ul>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#clientes">Clientes</a></li>
+        <li><a href="#faq">Preguntas frecuentes</a></li>
+        <li><a href="#contacto">Pedir presupuesto</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <ul>
+        <li><span class="footer-label">Teléfono</span><a href="tel:+542613363121">+54 261 336-3121</a></li>
+        <li><span class="footer-label">WhatsApp</span><a href="https://wa.me/542613363121" target="_blank" rel="noopener">Escribinos</a></li>
+        <li><span class="footer-label">Email</span><a href="mailto:bauberseguridad@gmail.com">bauberseguridad@gmail.com</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Oficina</h4>
+      <ul>
+        <li><span class="footer-label">Dirección</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Viamonte+4762+Chacras+de+Coria+Mendoza" target="_blank" rel="noopener">Viamonte 4762, Chacras de Coria<br>Luján de Cuyo, Mendoza</a></li>
+        <li><span class="footer-label">Oficina</span>Lunes a viernes de 9 a 18 hs</li>
+        <li><span class="footer-label">Central operativa</span><span class="footer-live"><span class="live-dot" aria-hidden="true"></span>24 horas, todos los días</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <span>© <span id="year">2026</span> Bauber Seguridad Privada · Todos los derechos reservados</span>
+      <span>Mendoza, Argentina</span>
     </div>
   </div>
 </footer>
 
 <!-- BOTÓN WA FLOTANTE -->
-<a href="https://wa.me/542613363121" target="_blank" class="wa-float" aria-label="WhatsApp">
+<a href="https://wa.me/542613363121" target="_blank" rel="noopener" class="wa-float" aria-label="Escribinos por WhatsApp">
   <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
 <script src="script.js"></script>
 
-<!-- FUNCIÓN WHATSAPP — reemplaza handleSubmit en script.js -->
-<script>
-function handleSubmit(event) {
-  event.preventDefault();
-  const form     = event.target;
-  const nombre   = form.nombre.value.trim();
-  const empresa  = form.empresa.value.trim();
-  const telefono = form.telefono.value.trim();
-  const email    = form.email.value.trim();
-  const servicio = form.servicio.value;
-  const mensaje  = form.mensaje.value.trim();
-
-  let texto = `Hola Bauber! 👋 Los contacto desde la web.\n\n`;
-  texto += `*Nombre:* ${nombre}\n`;
-  if (empresa)  texto += `*Empresa / Barrio:* ${empresa}\n`;
-  texto += `*WhatsApp:* ${telefono}\n`;
-  if (email)    texto += `*Email:* ${email}\n`;
-  texto += `*Servicio:* ${servicio}\n`;
-  if (mensaje)  texto += `\n*Mensaje:* ${mensaje}`;
-
-  window.open(`https://wa.me/542613363121?text=${encodeURIComponent(texto)}`, '_blank');
-
-  const btn = form.querySelector('.btn-submit span');
-  const orig = btn.textContent;
-  btn.textContent = '✓ Abriendo WhatsApp...';
-  setTimeout(() => { btn.textContent = orig; }, 3000);
-}
-</script>
 
 </body>
 </html>
