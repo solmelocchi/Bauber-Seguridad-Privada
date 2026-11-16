@@ -1,0 +1,7 @@
+# robots.txt de Bauber Seguridad Privada
+# Nota: Google solo lo lee en la raíz del dominio. Empieza a funcionar
+# cuando la página tenga su dominio propio.
+User-agent: *
+Allow: /
+
+Sitemap: https://solmelocchi.github.io/Bauber-Seguridad-Privada/sitemap.xml
